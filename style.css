@@ -1,0 +1,184 @@
+body {
+  box-sizing: border-box;
+  background-color: #111;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.svg-container {
+  position: relative;
+}
+
+#meter-bg-bar {
+  animation: dash 4s linear forwards infinite;
+  stroke-dasharray: 615;
+}
+
+@keyframes dash {
+  0%, 100% {
+    stroke-dashoffset: 400;
+  }
+  25% {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dashoffset: 100;
+  }
+  75% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.vpn-app {
+  background-color: #111;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 375px;
+}
+
+.vpn-app .speed-info {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  height: 50px;
+  background-color: #181a20;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+.vpn-app .speed-info div {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.vpn-app .speed-info .font-weight-bold {
+  font-size: 1.1em;
+  color: #00b4d8;
+}
+
+.vpn-app .location-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.vpn-app .location-info img {
+  height: 24px;
+  width: auto;
+}
+
+.vpn-app .location-info div {
+  flex-grow: 1;
+  padding-left: 10px;
+  text-align: left;
+}
+
+.vpn-app .location-info div small {
+  display: block;
+}
+
+.vpn-app .dropdown {
+  cursor: pointer;
+}
+
+.share {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.share a {
+  color: white;
+  transition: 0.4s ease-in-out;
+}
+
+.share a:hover {
+  color: red;
+}
+
+/* Navigation bar styling */
+.navbar {
+  background-color: #2e2e2e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.navbar-logo img {
+  height: 50px;
+  width: auto;
+}
+
+.navbar-menu {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Ensure that the main content doesn't overlap with the navbar */
+.content {
+  margin-top: 80px; /* Adjust based on navbar height */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-logo img {
+    height: 40px;
+  }
+  .navbar-menu {
+    font-size: 20px;
+  }
+}
+   .speed-info, .location-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .speed-info div, .location-info div {
+            flex: 1;
+            text-align: center;
+        }
+
+        .font-weight-bold {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .note {
+            font-size: 14px;
+            color: red;
+            margin-top: 20px;
+        }
+
+        .location-status {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #ff9999;
+        }
+
+        .fa {
+            font-size: 24px;
+            color: #ffffff;
+        }  
